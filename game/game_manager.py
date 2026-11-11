@@ -60,4 +60,3 @@ def save_game(name_player,rounds,list_rounds,player_score,computer_score):
     "Winner": calculate_winner(player_score,computer_score,name_player),
     "results": list_rounds}
     return game
-
