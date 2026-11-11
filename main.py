@@ -2,6 +2,7 @@ from game.game_manager import start_game
 from game.shaw_result import shaw_menu,shaw_Game_History,shaw_View_Statistics
 from game.inputs import get_num
 from game.save_and_load_json import load_game_history
+
 def main():
     while True:
         shaw_menu()
