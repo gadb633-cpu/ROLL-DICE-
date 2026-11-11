@@ -42,11 +42,29 @@ def shaw_game_result(game):
         Game saved successfully!
         ''')    
 def shaw_Game_History(games):
-    for game in games:
-        print(f'''
-            player name: {game["player_name"]}
-            rounds: {game["rounds"]}
-            player_score: {game["player_score"]}
-            computer_score: {game["computer_score"]}
-            Winner: {game["Winner"]}
-    ''')
+    if games ==[]:
+        shaw_msg()
+    else:    
+        for game in games:
+            print(f'''
+                player name: {game["player_name"]}
+                rounds: {game["rounds"]}
+                player_score: {game["player_score"]}
+                computer_score: {game["computer_score"]}
+                Winner: {game["Winner"]}
+        ''')
+def shaw_View_Statistics(games):
+    if games ==[]:
+        shaw_msg()   
+    else:
+        total_games = len(games)
+        computer_wins = sum(1 for game in games if game["Winner"] == "Computer")
+        draw = sum(1 for game in games if game["Winner"] == "draw")
+        player_wins = total_games - draw -computer_wins
+        print(f"Total Games: {total_games}")
+        print(f"Player Wins: {player_wins} ({(player_wins / total_games) * 100:.2f}%)")
+        print(f"Computer Wins: {computer_wins} ({(computer_wins / total_games) * 100:.2f}%)")
+        print(f"draw: {draw} ({(draw / total_games) * 100:.2f}%)\n")  
+
+def shaw_msg():
+    print("no games")        
