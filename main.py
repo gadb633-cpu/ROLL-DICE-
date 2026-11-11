@@ -1,6 +1,7 @@
 from game.game_manager import start_game
-from game.shaw_result import shaw_menu
+from game.shaw_result import shaw_menu,shaw_Game_History
 from game.inputs import get_num
+from game.save_and_load_json import load_game_history
 def main():
     while True:
         shaw_menu()
@@ -10,7 +11,8 @@ def main():
         if choice ==1:
             start_game()
         elif choice ==2:
-            pass
+            games = load_game_history()
+            shaw_Game_History(games)
         elif choice ==3:
             pass
         elif choice ==4:

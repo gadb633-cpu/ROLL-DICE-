@@ -41,3 +41,12 @@ def shaw_game_result(game):
 
         Game saved successfully!
         ''')    
+def shaw_Game_History(games):
+    for game in games:
+        print(f'''
+            player name: {game["player_name"]}
+            rounds: {game["rounds"]}
+            player_score: {game["player_score"]}
+            computer_score: {game["computer_score"]}
+            Winner: {game["Winner"]}
+    ''')
