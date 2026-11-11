@@ -1,5 +1,5 @@
 from game.inputs import get_num,get_name
-from game.shaw_result import shaw_round_result,shaw_info
+from game.shaw_result import shaw_round_result,shaw_info,shaw_game_result
 from game.roll_dice_random import roll_dice
 
 def check_winner(num_player,num_Computer,name_player):
@@ -32,8 +32,8 @@ def start_game():
             scores["computer_score"] +=1 
         list_rounds.append(round_result)
     new_game = save_game(name_player,rounds,list_rounds,scores["player_score"],scores["computer_score"])
+    shaw_game_result(new_game)
     return new_game
-
 
 def calculate_winner(player_score, computer_score,name_player):
     if player_score > computer_score:
@@ -42,6 +42,7 @@ def calculate_winner(player_score, computer_score,name_player):
         return "computer"
     else:
         return "draw"
+    
 def play_round(name_player,round):
     num_player = roll_dice()
     num_Computer = roll_dice()
