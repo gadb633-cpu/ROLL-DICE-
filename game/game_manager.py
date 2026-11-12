@@ -22,7 +22,7 @@ def save_round_result(round,num_player,num_Computer,name_player):
 def start_game():
     scores = {"player_score":0,"computer_score":0}
     name_player = get_name("enter your name")
-    rounds = get_num("enter num rounds(1-10)")
+    rounds = get_num("enter num rounds(1-10)",11)
     shaw_info(name_player,rounds)
     list_rounds = []
     for round in range(rounds):

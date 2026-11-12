@@ -6,9 +6,7 @@ from game.save_and_load_json import load_game_history
 def main():
     while True:
         shaw_menu()
-        choice = get_num("enter your choice(1-4)")
-        if choice not in [1,2,3,4]:
-            continue
+        choice = get_num("enter your choice(1-4)",5)
         if choice ==1:
             start_game()
         elif choice ==2:

@@ -4,7 +4,7 @@ def is_not_empty(name):
         return False
     return True
 
-def is_in_range_1_10(num):
-    if 0 < num <11:
+def is_in_range(num,max_num):
+    if 0 < num < max_num:
         return True
     return False
