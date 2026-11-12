@@ -4,7 +4,8 @@ from game.inputs import get_num
 from game.save_and_load_json import load_game_history
 
 def main():
-    while True:
+    status_run = True
+    while status_run:
         shaw_menu()
         choice = get_num("enter your choice(1-4)",5)
         if choice ==1:
@@ -14,7 +15,7 @@ def main():
         elif choice ==3:
             shaw_View_Statistics(load_game_history())
         elif choice ==4:
-            break
+            status_run = False
 
 if __name__ == "__main__":
     main()    

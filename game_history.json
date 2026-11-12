@@ -1,1 +1,23 @@
-[]
+[
+    {
+        "player_name": "gad",
+        "rounds": 2,
+        "player_score": 2,
+        "computer_score": 0,
+        "Winner": "gad",
+        "results": [
+            {
+                "round": 1,
+                "player_dice": 6,
+                "computer_dice": 4,
+                "winner": "gad"
+            },
+            {
+                "round": 2,
+                "player_dice": 5,
+                "computer_dice": 2,
+                "winner": "gad"
+            }
+        ]
+    }
+]
